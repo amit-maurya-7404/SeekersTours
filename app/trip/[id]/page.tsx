@@ -441,7 +441,7 @@ export default function TripDetailPage() {
                 Get in touch with our trip experts directly on WhatsApp for customized itineraries or group discounts.
               </p>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/918369218944"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full py-2.5 border border-accent text-accent font-semibold rounded-lg hover:bg-accent/10 transition-colors text-sm cursor-pointer"

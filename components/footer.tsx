@@ -119,7 +119,7 @@ export function Footer() {
                 </div>
                 <div className="pt-1 text-left">
                   <p className="text-[10px] text-primary-foreground/50 font-bold uppercase tracking-wider">Call</p>
-                  <span className="font-semibold text-primary-foreground/85">+91 98765 43210</span>
+                  <span className="font-semibold text-primary-foreground/85">+91 83692 18944</span>
                 </div>
               </li>
               <li className="flex flex-row items-center gap-3 text-sm justify-center md:justify-start">

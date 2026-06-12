@@ -118,7 +118,7 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="text-sm font-bold text-card-foreground uppercase tracking-wider mb-1">Direct Call</h3>
-                <p className="text-base text-muted-foreground font-semibold">+91 98765 43210</p>
+                <p className="text-base text-muted-foreground font-semibold">+91 83692 18944</p>
               </div>
             </motion.div>
 
@@ -135,7 +135,7 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="text-sm font-bold text-card-foreground uppercase tracking-wider mb-1">WhatsApp Chat</h3>
-                <p className="text-base text-muted-foreground font-semibold">+91 98765 43210</p>
+                <p className="text-base text-muted-foreground font-semibold">+91 83692 18944</p>
               </div>
             </motion.div>
 

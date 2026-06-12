@@ -56,7 +56,7 @@ export async function POST(request: Request) {
           
           <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 24px 0;" />
           <p style="font-size: 12px; color: #64748b; text-align: center; margin-bottom: 0;">
-            Need immediate help? Click to chat with us on <a href="https://wa.me/919876543210" style="color: #ea580c; text-decoration: none; font-weight: 600;">WhatsApp Support</a>.
+            Need immediate help? Click to chat with us on <a href="https://wa.me/918369218944" style="color: #ea580c; text-decoration: none; font-weight: 600;">WhatsApp Support</a>.
           </p>
         </div>
       </div>
