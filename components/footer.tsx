@@ -112,32 +112,32 @@ export function Footer() {
           {/* Contact Info */}
           <motion.div variants={itemVariants} className="md:col-span-3 text-center md:text-left">
             <h4 className="text-[6vw] md:text-[1.5vw] font-bold uppercase tracking-wider text-white mb-6">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex flex-row items-center gap-3 text-sm justify-center md:justify-start">
-                <div className="h-8 w-8 bg-white/5 border border-white/10 flex items-center justify-center rounded-lg text-accent flex-shrink-0">
-                  <Phone size={14} />
+            <ul className="inline-flex flex-col space-y-4 text-left">
+              <li className="flex flex-row items-center gap-3.5 text-sm justify-start">
+                <div className="h-10 w-10 bg-gradient-to-br from-accent/25 via-accent/15 to-transparent border border-accent/30 flex items-center justify-center rounded-xl text-accent flex-shrink-0 shadow-md shadow-black/10">
+                  <Phone size={18} className="text-white" />
                 </div>
-                <div className="pt-1 text-left">
+                <div className="pt-1">
                   <p className="text-[10px] text-primary-foreground/50 font-bold uppercase tracking-wider">Call</p>
                   <span className="font-semibold text-primary-foreground/85">+91 83692 18944</span>
                 </div>
               </li>
-              <li className="flex flex-row items-center gap-3 text-sm justify-center md:justify-start">
-                <div className="h-8 w-8 bg-white/5 border border-white/10 flex items-center justify-center rounded-lg text-accent flex-shrink-0">
-                  <Mail size={14} />
+              <li className="flex flex-row items-center gap-3.5 text-sm justify-start">
+                <div className="h-10 w-10 bg-gradient-to-br from-accent/25 via-accent/15 to-transparent border border-accent/30 flex items-center justify-center rounded-xl text-accent flex-shrink-0 shadow-md shadow-black/10">
+                  <Mail size={18} className="text-white" />
                 </div>
-                <div className="pt-1 text-left">
+                <div className="pt-1">
                   <p className="text-[10px] text-primary-foreground/50 font-bold uppercase tracking-wider">Email</p>
                   <a href="mailto:info@seekerstours.com" className="font-semibold text-primary-foreground/85 hover:text-accent transition-colors">
                     info@seekerstours.com
                   </a>
                 </div>
               </li>
-              <li className="flex flex-row items-start gap-3 text-sm justify-center md:justify-start">
-                <div className="h-8 w-8 bg-white/5 border border-white/10 flex items-center justify-center rounded-lg text-accent flex-shrink-0 mt-1">
-                  <MapPin size={14} />
+              <li className="flex flex-row items-start gap-3.5 text-sm justify-start">
+                <div className="h-10 w-10 bg-gradient-to-br from-accent/25 via-accent/15 to-transparent border border-accent/30 flex items-center justify-center rounded-xl text-accent flex-shrink-0 mt-1 shadow-md shadow-black/10">
+                  <MapPin size={18} className="text-white" />
                 </div>
-                <div className="pt-1 text-left max-w-[220px] sm:max-w-xs md:max-w-none">
+                <div className="pt-1 max-w-[220px] sm:max-w-xs md:max-w-none">
                   <p className="text-[10px] text-primary-foreground/50 font-bold uppercase tracking-wider">Visit</p>
                   <span className="font-semibold text-primary-foreground/85">123 Adventure Lane, Fort, Mumbai, MH 400001</span>
                 </div>
