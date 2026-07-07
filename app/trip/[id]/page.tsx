@@ -9,42 +9,221 @@ import { Footer } from '@/components/footer'
 import { SAMPLE_TRIPS } from '@/components/trip-cards'
 import { BookingModal } from '@/components/booking-modal'
 
-const TRIP_ITINERARIES: Record<string, { day: number; title: string; description: string; activities: string[] }[]> = {
+const TRIP_ITINERARIES: Record<
+  string,
+  {
+    day: number
+    title: string
+    description?: string
+    activities: string[]
+    slots?: { time?: string; text: string }[]
+  }[]
+> = {
   w1: [
-    { day: 1, title: 'Assembly & Ascent to Harihar Summit', description: 'Assemble at Kasara railway station early morning. Board private vehicles to Nirgudpada base village. After breakfast, begin the trek through forest trails to reach the base of the iconic near-vertical 117 rock-cut steps. Climb with safety guidance, explore the historical water tanks and temple at the summit, descend safely, and enjoy a traditional village lunch.', activities: ['Kasara assembly', 'Vertical Rock Steps climb', 'Summit exploration', 'Traditional base lunch'] }
+    {
+      day: 1,
+      title: 'CSMT to Kasara & Bari Village Journey',
+      activities: ['Kasara local train', 'Bari Gaon transport', 'Base village arrival'],
+      slots: [
+        { time: '08:44 PM', text: 'Board the Kasara Fast Local train from CSMT (Byculla 08:51 PM, Dadar 08:58 PM, Kurla 09:07 PM, Ghatkopar 09:11 PM, Thane 09:26 PM, Dombivali 09:42 PM, Kalyan 09:52 PM).' },
+        { time: '11:04 PM', text: 'Reach Kasara Station and assemble with the trek leaders at the ticket counter.' },
+        { time: '11:15 PM', text: 'Depart for Bari base village in privately booked vehicles.' }
+      ]
+    },
+    {
+      day: 2,
+      title: 'Summit Climb, Kalsubai Sunrise & Return',
+      activities: ['Night climb', 'Sunrise from Summit', 'Decent trek', 'Local lunch & return'],
+      slots: [
+        { time: '02:00 AM', text: 'Reach the base village Bari, freshen up, and get ready.' },
+        { time: '02:30 AM', text: 'Gear up, pack your bags and start the trek to the summit under the starlit sky.' },
+        { time: '05:30 AM', text: 'Reach the Kalsubai summit in time for a breathtaking sunrise. Explore Kalsubai Temple and enjoy views of Bhandardara Arthur Lake.' },
+        { time: '06:45 AM', text: 'Start the descent from the peak.' },
+        { time: '07:00 AM', text: 'Grab a quick breakfast with hot tea on the mountain and continue descending.' },
+        { time: '12:30 PM', text: 'Reach back down to the base village.' },
+        { time: '01:30 PM', text: 'Freshen up and enjoy a hot, delicious local Maharashtrian lunch.' },
+        { time: '03:00 PM', text: 'Board private vehicles to travel back to Kasara Station.' },
+        { time: '08:00 PM', text: 'Reach back to Mumbai (Adios to the mountains!).' }
+      ]
+    }
   ],
   w2: [
-    { day: 1, title: 'Ascend to the Plateau & Sunset', description: 'Start the trek from Pachnai base village. Reach the plateau, explore ancient caves, and witness a legendary sunset from Konkan Kada.', activities: ['Scenic Pachnai trek', 'Temple exploration', 'Konkan Kada Sunset', 'Tent camping & Dinner'] },
-    { day: 2, title: 'Taramati Peak Sunrise & Descend', description: 'Wake up early to catch the sunrise from Taramati Peak. Have breakfast and descend back to the base village.', activities: ['Taramati sunrise climb', 'Plateau breakfast', 'Descend to base', 'Return journey'] }
+    {
+      day: 1,
+      title: 'Kasara to Bari Village & Sunset Summit Climb',
+      activities: ['Local train travel', 'Transfer to Bari village', 'Sunset trek start', 'Bonfire night & dinner'],
+      slots: [
+        { time: '11:42 AM', text: 'Board the Kasara Local Fast Train from CST (Byculla 11:49 AM, Dadar 11:55 AM, Kurla 12:02 PM, Ghatkopar 12:06 PM, Thane 12:22 PM, Dombivali 12:38 PM, Kalyan 12:47 PM).' },
+        { time: '01:58 PM', text: 'Arrive at Kasara Station and meet the team at the ticket counter by 02:00 PM.' },
+        { time: '02:30 PM', text: 'Board private vehicles and head to a local Dhaba for a quick lunch, then proceed to Bari.' },
+        { time: '05:00 PM', text: 'Reach base village Bari. Relax, enjoy evening refreshments, and gear up.' },
+        { time: '06:00 PM', text: 'Tie your laces and start the long sunset climb to the top.' },
+        { time: '08:30 PM', text: 'Reach the summit campsite and settle into your tents.' },
+        { time: '09:00 PM', text: 'Have a delicious local Maharashtrian dinner, play games, share stories around the bonfire, and enjoy stargazing.' },
+        { time: '11:30 PM', text: 'Sleep in tents under the open sky.' }
+      ]
+    },
+    {
+      day: 2,
+      title: 'Sunrise Temple Visit & Descent to Kasara',
+      activities: ['Sunrise over clouds', 'Arthur Lake views', 'Breakfast & descent', 'Return to Kasara'],
+      slots: [
+        { time: '05:30 AM', text: 'Wake up call to watch the mountain morning.' },
+        { time: '06:15 AM', text: 'Reach Kalsubai Temple for a beautiful sunrise and views of Arthur Lake.' },
+        { time: '06:45 AM', text: 'Start the descent from the summit.' },
+        { time: '07:00 AM', text: 'Grab a quick breakfast on the mountain and continue descending.' },
+        { time: '11:00 AM', text: 'Arrive back down at Bari base village.' },
+        { time: '11:30 AM', text: 'Head back to Kasara Station.' },
+        { time: '04:00 PM', text: 'Reach back to Mumbai and say goodbye until next time!' }
+      ]
+    }
   ],
   w3: [
-    { day: 1, title: 'Pawna Lakeside Check-in', description: 'Arrive at the campsite by evening. Enjoy welcome drinks, watch the sunset, and dig into barbecue and live acoustic music by the bonfire.', activities: ['Lakeside check-in', 'Evening high tea', 'Live music & BBQ', 'Cozy Bonfire'] },
-    { day: 2, title: 'Sunrise & Boating', description: 'Wake up to the mist over the lake, enjoy breakfast, go for a quick boat ride, and check out with memories.', activities: ['Mist sunrise watch', 'Breakfast', 'Boating in Pawna', 'Check-out'] }
+    {
+      day: 1,
+      title: 'Kasara Travel & Pachnai Base Drive',
+      activities: ['Kasara fast local', 'Meet at ticket counter', 'Briefing & drive to Pachnai'],
+      slots: [
+        { time: '08:44 PM', text: 'Catch the train for Kasara from CSMT (Byculla 08:51 PM, Dadar 08:58 PM, Kurla 09:07 PM, Ghatkopar 09:11 PM, Thane 09:26 PM, Dombivali 09:42 PM, Kalyan 09:52 PM).' },
+        { time: '11:04 PM', text: 'Reach Kasara Station.' },
+        { time: '11:20 PM', text: 'Report to the trek leaders at the ticket counter.' },
+        { time: '11:30 PM', text: 'Start the journey towards base village Pachnai in private vehicles post-briefing.' }
+      ]
+    },
+    {
+      day: 2,
+      title: 'Harishchandragad Ascent, Konkan Kada & Return',
+      activities: ['Fort ascent trek', 'Konkan Kada viewing', 'Temple & cave exploration', 'Lunch & depart'],
+      slots: [
+        { time: '04:30 AM', text: 'Reach Pachnai base village, freshen up, and have breakfast.' },
+        { time: '05:00 AM', text: 'Assemble for instructions and briefing session by the leaders.' },
+        { time: '05:10 AM', text: 'Start the trek towards Harishchandragad fort.' },
+        { time: '07:30 AM', text: 'Reach the stunning Konkan Kada cliff, relax and soak in the views.' },
+        { time: '08:00 AM', text: 'Have breakfast, explore the surroundings, and take photographs.' },
+        { time: '09:30 AM', text: 'Hike to Harishchandreshwar Temple, explore caves (including Kedareshwar Cave), and Saptatirtha Pushkarni.' },
+        { time: '10:30 AM', text: 'Start descending back to Pachnai base village.' },
+        { time: '01:30 PM', text: 'Reach the base village and enjoy a hearty local lunch.' },
+        { time: '02:30 PM', text: 'Depart for Kasara Station.' },
+        { time: '06:00 PM', text: 'Arrive at Kasara Station and catch the local train back to Mumbai.' }
+      ]
+    }
   ],
   w4: [
-    { day: 1, title: 'Trek to Rajmachi Village', description: 'Trek through the lush green forests from Lonavala. Reach the village, enjoy a village home-cooked dinner, and spot glowing fireflies.', activities: ['Forest trek trail', 'Village check-in', 'Traditional dinner', 'Fireflies sighting'] },
-    { day: 2, title: 'Shrivardhan Fort Summit', description: 'Climb the historic Shrivardhan Fort early morning for panoramic views of Sahyadri peaks. Return for breakfast and descend.', activities: ['Fort summit climb', 'Valley viewing', 'Local breakfast', 'Descend trek'] }
+    {
+      day: 1,
+      title: 'Drive to Pachnai Base & Trek to Kokankada Campsite',
+      activities: ['Travel to Pachnai', 'Quick lunch break', 'Hike to Kokankada', 'Campfire & Tent stay'],
+      slots: [
+        { time: '09:37 AM', text: 'Catch the Kasara Fast Local from CSMT (Dadar 09:51 AM, Ghatkopar 10:02 AM, Thane 10:20 AM, Kalyan 10:43 AM).' },
+        { time: '11:54 AM', text: 'Reach Kasara Station.' },
+        { time: '12:00 PM', text: 'Report at Kasara Station and meet the team.' },
+        { time: '12:15 PM', text: 'Board private vehicles, head to a Dhaba for quick lunch, and drive to Pachnai village (takes ~3 hours).' },
+        { time: '04:00 PM', text: 'Reach base village Pachnai. Relax, enjoy evening refreshments, and gear up.' },
+        { time: '04:30 PM', text: 'Start the trek towards Harishchandragad fort.' },
+        { time: '07:30 PM', text: 'Reach the campsite on top of Konkan Kada. Settle in and freshen up.' },
+        { time: '09:00 PM', text: 'Enjoy a hot, authentic local dinner, play games, share campfire stories, and sleep in tents.' }
+      ]
+    },
+    {
+      day: 2,
+      title: 'Taramati Sunrise, Fort Exploration & Return',
+      activities: ['Taramati Peak Sunrise', 'Explore fort ruins', 'Descend Pachnai route', 'Lunch & travel to Kasara'],
+      slots: [
+        { time: '05:00 AM', text: 'Wake up call and freshen up.' },
+        { time: '05:15 AM', text: 'Start the early morning trek to Taramati Peak.' },
+        { time: '06:30 AM', text: 'Reach Taramati Peak (the highest point of the fort) and witness the sunrise.' },
+        { time: '08:00 AM', text: 'Return to Konkan Kada and have breakfast.' },
+        { time: '08:00 AM - 09:30 AM', text: 'Relax and explore the massive Konkan Kada and Harishchandragad ruins.' },
+        { time: '10:30 AM', text: 'Start descending back to the base village.' },
+        { time: '01:00 PM', text: 'Reach Pachnai base village and have a warm local lunch.' },
+        { time: '02:00 PM', text: 'Depart in private vehicles back to Kasara Station.' },
+        { time: '06:00 PM', text: 'Reach Kasara Station and board the 06:18 PM fast local back to Mumbai.' }
+      ]
+    }
   ],
   w5: [
-    { day: 1, title: 'Forest Trail to Turquoise Pool', description: 'Embark on a one-day trek through the dense forests of Bhira. Reach the breathtaking Devkund waterfall, swim in the turquoise pool, and head back.', activities: ['Bhira Dam trail walk', 'Dense forest hiking', 'Waterfall dip', 'Local lunch at base'] }
+    {
+      day: 1,
+      title: 'Board Kasara Train & Drive to Nirgudpada',
+      activities: ['Train travel', 'Private vehicles to Nirgudpada'],
+      slots: [
+        { time: '09:30 PM', text: 'Board the Kasara Slow Local from CSMT (CSMT 09:32 PM, Byculla 09:40 PM, Dadar 09:50 PM, Kurla 10:00 PM, Ghatkopar 10:06 PM, Thane 10:27 PM, Dombivali 10:50 PM, Kalyan 11:01 PM).' },
+        { time: '12:11 AM', text: 'Reach Kasara Station.' },
+        { time: '12:20 AM', text: 'Board private vehicles from Kasara and start the journey to Nirgudpada base village.' }
+      ]
+    },
+    {
+      day: 2,
+      title: 'Hike to Harihar Fort, Vertical Steps Climb & Return',
+      activities: ['80-degree stairs climb', 'Harihar summit exploration', 'Descend Nirgudpada', 'Breakfast at base'],
+      slots: [
+        { time: '03:30 AM', text: 'Reach base village Nirgudpada and rest for an hour.' },
+        { time: '04:00 AM', text: 'Start the trek to Harihar Fort.' },
+        { time: '06:30 AM', text: 'Begin the thrilling climb of the vertically inclined 80-degree rock-cut steps.' },
+        { time: '07:30 AM', text: 'Reach the summit. Relax and explore the Hanuman Temple, Shiva Temple, and ponds.' },
+        { time: '08:30 AM', text: 'Start descending back via the rock steps.' },
+        { time: '11:30 AM', text: 'Reach base village Nirgudpada and have breakfast.' },
+        { time: '12:00 PM', text: 'Board vehicles back to Kasara Station.' },
+        { time: '01:00 PM', text: 'Reach Kasara Station and catch the next local train to Mumbai, reaching by 03:00 PM.' }
+      ]
+    }
   ],
   w6: [
-    { day: 1, title: 'Night Trek Ascent', description: 'Start the trek from Bari village at night. Climb the iron ladders and reach the summit under the starlit sky to pitch camps.', activities: [' Bari village assembly', 'Night ladder climbing', 'Summit camping', 'Stargazing'] },
-    { day: 2, title: 'Highest Peak Sunrise', description: 'Watch the sunrise from Kalsubai temple (highest point in Maharashtra). Descend to the base village for hot breakfast.', activities: ['Sunrise over clouds', 'Kalsubai temple visit', 'Descend trek', 'Maharashtrian breakfast'] }
+    {
+      day: 1,
+      title: 'Karjat Station Travel & Sonewadi Base Drive',
+      activities: ['Karjat Fast Local', 'Meet team at Karjat', 'Travel to Sonewadi'],
+      slots: [
+        { time: '11:18 PM', text: 'Board the Khopoli Fast Local from CSMT (Byculla 11:25 PM, Dadar 11:31 PM, Kurla 11:38 PM, Ghatkopar 11:42 PM, Thane 11:58 PM, Dombivali 12:13 AM, Kalyan 12:21 AM).' },
+        { time: '01:12 AM', text: 'Arrive at Karjat Station.' },
+        { time: '01:15 AM', text: 'Meet the Bhatakna team at Karjat Station.' },
+        { time: '02:00 AM', text: 'Reach base village Sonewadi via local transport.' }
+      ]
+    },
+    {
+      day: 2,
+      title: 'Night Ascent, Sunrise over Matheran & Return',
+      activities: ['Introduction & Ascent', 'Sunrise atop Sondai', 'Descend to base', 'Local breakfast'],
+      slots: [
+        { time: '02:30 AM', text: 'Start the night trek post introduction and safety briefing.' },
+        { time: '04:00 AM', text: 'Reach the summit plateau and rest.' },
+        { time: '06:30 AM', text: 'Good morning! Enjoy a spectacular sunrise and views of Morbe Dam, Vavarle Dam, and the Matheran range.' },
+        { time: '06:45 AM', text: 'Start descending.' },
+        { time: '08:00 AM', text: 'Reach base village Sonewadi and freshen up.' },
+        { time: '08:30 AM', text: 'Have a warm local breakfast with hot tea.' },
+        { time: '09:00 AM', text: 'Leave for Karjat Station and catch the next local train back to Mumbai.' }
+      ]
+    }
   ],
   w7: [
-    { day: 1, title: 'Bhandardara Lakeside Camping', description: 'Camp beside Arthur Lake in Bhandardara. Explore the grand Wilson Dam and Randha falls, followed by an evening stargazing session.', activities: [' Arthur Lake camping', 'Wilson Dam sightseeing', 'Stargazing session', 'Lakeside BBQ'] },
-    { day: 2, title: 'Lakeside Boating & Departure', description: 'Enjoy boating on Arthur Lake in the morning. Have breakfast and drive back.', activities: ['Lake boat ride', 'Local breakfast', 'Departure'] }
-  ],
-  w8: [
-    { day: 1, title: 'Samrad Base Village & Giant Rappelling', description: 'Arrive at Samrad base village, freshen up, and have breakfast. Enter Sandhan Valley (Valley of Shadows). Trek through massive boulder paths, complete the thrilling 45ft rappelling patch, and pitch tents for lakeside camping under starlit skies.', activities: ['Samrad village arrival', 'Valley of Shadows trek', '45ft Rappelling patch', 'Lakeside tent camping'] },
-    { day: 2, title: 'Trek to Dehne & Return', description: 'Wake up early, enjoy breakfast by the campsite, trek towards Dehne base village. Board vehicles back to Kasara station and return to Mumbai.', activities: ['Campsite sunrise', 'Dehne village descent', 'Local Maharashtrian breakfast', 'Kasara return journey'] }
-  ],
-  w9: [
-    { day: 1, title: 'Andharban Deep Forest Trek', description: 'Reach Pimpri base village in Tamhini Ghat. Begin the 13km descend trek through Andharban forest. Walk under dark canopy cover, enjoy Kundalika Valley viewpoints, take dips in waterfall streams, and enjoy hot local lunch at the end point before departure.', activities: ['Pimpri base arrival', '13km Forest canopy walk', 'Kundalika valley view', 'Monsoon waterfall dips'] }
-  ],
-  w10: [
-    { day: 1, title: 'Aadrai Jungle & Kalu Waterfall View', description: 'Arrive at Malshej Ghat base. Trek through the dense and muddy paths of Aadrai jungle. Spot local flora/fauna, visit the ancient caves & Nageshwar Temple, and reach the viewpoint for the spectacular Kalu Waterfall. Return to base for hot lunch and return drive.', activities: ['Malshej Ghat drive', 'Dense Aadrai jungle hike', 'Kalu waterfall view', 'Village lunch & Return'] }
+    {
+      day: 1,
+      title: 'Meet at Panvel Station & Ascent to Prabalmachi Campsite',
+      activities: ['Meet at Panvel', 'Thakurwadi transfer', 'Prabalmachi sunset hike', 'Campfire dinner & stargazing'],
+      slots: [
+        { time: '04:40 PM', text: 'Meet the Bhatakna team at Panvel Station.' },
+        { time: '04:45 PM', text: 'Travel towards Thakurwadi base village in transfer vehicles.' },
+        { time: '05:30 PM', text: 'Start the trek towards Prabalmachi after a briefing.' },
+        { time: '07:45 PM', text: 'Reach the campsite at Prabalmachi plateau and settle in.' },
+        { time: '08:30 PM', text: 'Enjoy a hot, home-cooked local dinner, play group games, share stories, and sit around the campfire.' },
+        { time: '12:00 AM', text: 'Sleep in tents under the open sky.' }
+      ]
+    },
+    {
+      day: 2,
+      title: 'Climb Kalavantin Pinnacle & Return',
+      activities: ['Rock-cut steps climb', 'Kalavantin Pinnacle views', 'Prabalmachi breakfast', 'Return to Mumbai'],
+      slots: [
+        { time: '05:00 AM', text: 'Wake up call, freshen up and gear up.' },
+        { time: '06:00 AM', text: 'Start climbing the famous zigzag rock-cut steps of Kalavantin Durg.' },
+        { time: '07:30 AM', text: 'Reach the pinnacle summit. Take photos inside the clouds and explore.' },
+        { time: '08:00 AM', text: 'Take a group photo and start descending towards Prabalmachi.' },
+        { time: '09:00 AM', text: 'Have breakfast, hot tea, and relax at Prabalmachi.' },
+        { time: '11:00 AM', text: 'Reach base Thakurwadi.' },
+        { time: '12:00 PM', text: 'Travel back towards Panvel Station.' },
+        { time: '05:00 PM', text: 'Arrive back in Mumbai.' }
+      ]
+    }
   ],
   d1: [
     { day: 1, title: 'Leh Arrival & Acclimatization', description: 'Arrive at Leh Airport, check-in to your hotel, and spend the day resting to acclimatize to high altitude.', activities: ['Leh airport pick-up', 'Hotel check-in', 'Rest & Acclimatization', 'Light evening walk'] },
@@ -268,25 +447,48 @@ export default function TripDetailPage() {
 
             {/* Itinerary Timeline */}
             <div className="bg-card rounded-xl p-6 sm:p-8 shadow-lg border border-border">
-              <h2 className="text-2xl font-bold text-card-foreground mb-8">Day-by-Day Itinerary</h2>
-              <div className="relative border-l border-border pl-6 sm:pl-8 ml-4 sm:ml-6 space-y-10">
+              <h2 className="text-2xl font-bold text-card-foreground mb-8">Trip Itinerary</h2>
+              <div className="relative border-l border-border pl-6 sm:pl-8 ml-4 sm:ml-6 space-y-12">
                 {itinerary.map((day, idx) => (
                   <div key={day.day} className="relative">
-                    {/* Timeline dot */}
+                    {/* Day number dot */}
                     <div className="absolute -left-[45px] sm:-left-[53px] top-1.5 w-10 h-10 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-bold text-sm border-4 border-card shadow-md">
                       {day.day}
                     </div>
 
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-bold text-card-foreground mb-2">
+                    <div className="space-y-4">
+                      <h3 className="text-xl sm:text-2xl font-bold text-card-foreground">
                         {day.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base mb-4">
-                        {day.description}
-                      </p>
+
+                      {day.slots && day.slots.length > 0 ? (
+                        <div className="relative border-l border-border/80 pl-4 sm:pl-6 ml-2 space-y-6 mt-6 pb-2">
+                          {day.slots.map((slot, sIdx) => (
+                            <div key={sIdx} className="relative group">
+                              {/* Sub-timeline dot */}
+                              <div className="absolute -left-[21px] sm:-left-[29px] top-1.5 w-3.5 h-3.5 rounded-full bg-secondary border-2 border-card shadow-sm transition-transform group-hover:scale-125 duration-200" />
+                              
+                              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
+                                {slot.time && (
+                                  <span className="inline-flex items-center shrink-0 px-2.5 py-1 text-xs font-bold rounded-md bg-secondary/15 text-secondary border border-secondary/20 shadow-sm w-fit uppercase tracking-wider">
+                                    {slot.time}
+                                  </span>
+                                )}
+                                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                                  {slot.text}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base mb-4">
+                          {day.description}
+                        </p>
+                      )}
                       
                       {/* Activities badges */}
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 pt-2">
                         {day.activities.map((activity, i) => (
                           <span
                             key={i}
