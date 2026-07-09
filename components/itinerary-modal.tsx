@@ -107,7 +107,7 @@ export function ItineraryModal({ trip, isOpen, onClose, onBook }: ItineraryModal
                     </div>
                     <div>
                       <div className="text-xs sm:text-sm font-semibold text-muted-foreground mb-1">Price</div>
-                      <div className="text-base sm:text-2xl font-bold text-accent">${trip.price}</div>
+                      <div className="text-base sm:text-2xl font-bold text-accent">₹{trip.price}</div>
                     </div>
                   </div>
 

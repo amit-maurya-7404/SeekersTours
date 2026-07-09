@@ -13,10 +13,20 @@ export async function POST(request: Request) {
       notes,
       tripTitle,
       tripPrice,
+      bookingOption,
       tripId
     } = body
 
-    const totalCost = Number(tripPrice) * Number(travelers)
+    const totalCost = Math.round(Number(tripPrice) * Number(travelers))
+
+    // Clean WhatsApp number for reliable wa.me links
+    let cleanWhatsapp = whatsapp.replace(/\D/g, '')
+    if (cleanWhatsapp.length === 11 && cleanWhatsapp.startsWith('0')) {
+      cleanWhatsapp = cleanWhatsapp.substring(1)
+    }
+    if (cleanWhatsapp.length === 10) {
+      cleanWhatsapp = '91' + cleanWhatsapp
+    }
 
     // Construct the email templates
     const userEmailHtml = `
@@ -35,6 +45,10 @@ export async function POST(request: Request) {
               <tr>
                 <td style="padding: 6px 0; color: #64748b; font-weight: 500;">Adventure:</td>
                 <td style="padding: 6px 0; color: #0f172a; font-weight: bold;">${tripTitle}</td>
+              </tr>
+              <tr>
+                <td style="padding: 6px 0; color: #64748b; font-weight: 500;">Package Option:</td>
+                <td style="padding: 6px 0; color: #0f172a; font-weight: bold;">${bookingOption || 'Standard'}</td>
               </tr>
               <tr>
                 <td style="padding: 6px 0; color: #64748b; font-weight: 500;">Batch Date:</td>
@@ -80,11 +94,15 @@ export async function POST(request: Request) {
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #64748b; font-weight: 500;">WhatsApp Number:</td>
-              <td style="padding: 8px 0; color: #0f172a; font-weight: bold;"><a href="https://wa.me/${whatsapp.replace(/\D/g, '')}" style="color: #ea580c; text-decoration: none;">${whatsapp}</a></td>
+              <td style="padding: 8px 0; color: #0f172a; font-weight: bold;"><a href="https://wa.me/${cleanWhatsapp}" style="color: #ea580c; text-decoration: none;">${whatsapp}</a></td>
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #64748b; font-weight: 500;">Adventure Trip:</td>
               <td style="padding: 8px 0; color: #0f172a; font-weight: bold;">${tripTitle} (ID: ${tripId})</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; color: #64748b; font-weight: 500;">Package Option:</td>
+              <td style="padding: 8px 0; color: #0f172a; font-weight: bold;">${bookingOption || 'Standard'}</td>
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #64748b; font-weight: 500;">Batch Date:</td>
@@ -105,7 +123,7 @@ export async function POST(request: Request) {
           </table>
           
           <div style="text-align: center; margin-top: 30px;">
-            <a href="https://wa.me/${whatsapp.replace(/\D/g, '')}" style="background-color: #25d366; color: #ffffff; padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-block; font-size: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <a href="https://wa.me/${cleanWhatsapp}" style="background-color: #25d366; color: #ffffff; padding: 12px 24px; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-block; font-size: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
               Reach out on WhatsApp
             </a>
           </div>
