@@ -63,6 +63,13 @@ const delaGothicOne = Dela_Gothic_One({
 export const metadata: Metadata = {
   title: 'Seekers Tours - Premium Adventure Travel',
   description: 'Discover unforgettable journeys with Seekers Tours. Expert-guided adventure travel experiences to exotic destinations.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: '4cY5tsr4YyZpMkzBMj8UL5eydKy5lgpyoZygz5v3X-w',
+  },
   icons: {
     icon: [
       {

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, MapPin, Users, Compass, Search, Star } from 'lucide-react'
 import Link from 'next/link'
-import { SAMPLE_TRIPS, type Trip } from '@/components/trip-cards'
+import { SAMPLE_TRIPS, type Trip } from '@/lib/trips'
 
 const HERO_IMAGES = [
   'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&h=900&fit=crop', // Mountain road trip

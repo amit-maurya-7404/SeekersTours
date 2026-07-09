@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Star, MapPin, Clock, Check, X, Calendar, ChevronRight, ArrowLeft, ChevronUp } from 'lucide-react'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
-import { SAMPLE_TRIPS } from '@/components/trip-cards'
+import { SAMPLE_TRIPS } from '@/lib/trips'
 import { BookingModal } from '@/components/booking-modal'
 import { getUpcomingDepartures } from '@/lib/date-helper'
 
