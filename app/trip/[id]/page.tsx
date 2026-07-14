@@ -23,52 +23,72 @@ const TRIP_ITINERARIES: Record<
   w1: [
     {
       day: 1,
-      title: 'Late Night Departure from Mumbai',
-      activities: ['Pickups in Mumbai', 'Overnight journey to Malshej'],
+      title: 'Departure from Mumbai',
+      activities: ['Pickups in Mumbai', 'Overnight journey'],
       slots: [
-        { time: '10:00 PM', text: 'Board the private vehicle from Borivali. Pickup points along Andheri, Sion, and Thane.' },
-        { time: '10:30 PM - 11:30 PM', text: 'Pickups completed and drive towards the base village Khireshwar/Khireshwar route.' }
+        { time: '10:00 PM', text: 'SGNP, Borivali (Meet SEEKERS Team)' },
+        { time: '10:15 PM', text: 'Settle down in our private vehicle as we start our journey towards the base Village.' },
+        { time: '10:20 PM', text: 'Malad' },
+        { time: '10:30 PM', text: 'Goregaon' },
+        { time: '10:40 PM', text: 'Gondavali Bus Stop, Andheri' },
+        { time: '10:50 PM', text: 'Kalanagar bus stop, Bandra' },
+        { time: '11:00 PM', text: 'Sion Circle' },
+        { time: '11:10 PM', text: 'Chembur' },
+        { time: '11:20 PM', text: 'Ghatkopar' },
+        { time: '11:30 PM', text: 'Thane' },
+        { time: '12:15 AM', text: 'KALYAN Bypass' }
       ]
     },
     {
       day: 2,
-      title: 'Trek in Aadrai Jungle, Waterfalls & Return',
-      activities: ['Khireshwar arrival', 'Monsoon forest trek', 'Aadrai waterfall', 'Lunch & travel to Mumbai'],
+      title: 'Trek to Aadrai Jungle',
+      activities: ['Jungle stream crossing', 'Taramathi ghal point', 'Mist and clouds', 'Local village lunch', 'Return to Mumbai'],
       slots: [
-        { time: '03:30 AM', text: 'Reach the base village and rest in the vehicle.' },
-        { time: '05:30 AM', text: 'Wake up call. Freshen up and have a warm breakfast.' },
-        { time: '07:30 AM', text: 'Start the trek through the dense, mystical Aadrai jungle.' },
-        { time: '10:30 AM', text: 'Reach the viewpoint/waterfall. Explore the unexplored stream paths.' },
-        { time: '11:30 AM', text: 'Begin the return trek to the base village.' },
-        { time: '02:30 PM', text: 'Reach the base village and relish a hot local Maharashtrian lunch.' },
-        { time: '04:00 PM', text: 'Board the private vehicle and depart for Mumbai.' },
-        { time: '10:00 PM', text: 'Arrive back in Mumbai with beautiful monsoon memories.' }
+        { time: '05:00 AM', text: 'Reach the Base village, from where you can get a glimpse of Harishchandragad peak.' },
+        { time: '05:30 AM', text: 'Get freshen up and Have Breakfast & Tea to get ready for this enthralling forest trek.' },
+        { time: '07:00 AM', text: 'Gear up, & pack your bags and embark on this trek! For adventure Trek, It’s gonna be a long Walk Trail crossing waterfall stream to the Down. Make a few halts on the way where you can grab your snack or a drink.' },
+        { time: '11:00 AM', text: 'Reach Taramathi ghal crossing point half of the jungle where we can enjoy waterfalls/streams. Witness a beautiful view of heaven on earth & foggy clouds. (We will not proceed further as it requires another 5/6 hours)' },
+        { time: '11:30 AM', text: 'Take a group picture & then start your descent.' },
+        { time: '12:00 PM', text: 'Start your descent. Finally, you get a view of the surroundings you Trail through the Dark Forest in the early morning.' },
+        { time: '01:15 PM', text: 'Reach back down and grab a quick home-cooked local village lunch to curb your hunger.' },
+        { time: '04:00 PM', text: 'Time to head back to Mumbai.' },
+        { time: '10:00 PM', text: 'Adios! Back to the mundane city life. Until next time, SEEKERS!' }
       ]
     }
   ],
   w2: [
     {
       day: 1,
-      title: 'Late Night Departure from Mumbai',
-      activities: ['Pickups in Mumbai', 'Overnight journey to Malshej'],
+      title: 'Departure from Mumbai',
+      activities: ['Pickups in Mumbai', 'Overnight journey'],
       slots: [
-        { time: '10:00 PM', text: 'Board the private vehicle from Borivali. Pickup points along Andheri, Sion, and Thane.' },
-        { time: '11:00 PM', text: 'Head towards the Malshej Ghat region.' }
+        { time: '10:00 PM', text: 'Borivali National Park (https://goo.gl/maps/qvxmxjK8Tmn5JgScA)' },
+        { time: '10:05 PM', text: 'Samta Nagar, Kandivali (https://goo.gl/maps/cSGKQWVSGDhS4qzP9)' },
+        { time: '10:15 PM', text: 'Sufi Irani Cafe, Goregaon (https://goo.gl/maps/4ZTNqab65pKPDoNC9)' },
+        { time: '10:30 PM', text: 'Hanuman Road Bus Stop Andheri (https://goo.gl/maps/SWKWuGMXSWgajCsSA)' },
+        { time: '10:45 PM', text: 'Kalanagar Bust Stop, Bandra (https://goo.gl/maps/jGkGpBZrRto5gRTJ9)' },
+        { time: '11:00 PM', text: 'Neeta Volvo, Sion (https://goo.gl/maps/iidWMx1DKGybV9jC9)' },
+        { time: '11:10 PM', text: 'Amar Mahal Palace (https://goo.gl/maps/MqiA3pRQvBvwEvVB8)' },
+        { time: '11:45 PM', text: 'Teen Hath Naka, Thane. (https://goo.gl/maps/w5xCKv9A7GTXm3Ju9)' }
       ]
     },
     {
       day: 2,
-      title: 'Kalu Waterfall Trek & Return',
-      activities: ['Base village arrival', 'Trek to Kalu waterfall', 'Lunch at base', 'Return to Mumbai'],
+      title: 'Trek to Kalu Waterfall',
+      activities: ['Waterfall dip', 'Kalu stream crossing', 'Natural Jacuzzi', 'Local Lunch', 'Return to Mumbai'],
       slots: [
-        { time: '03:30 AM', text: 'Reach the base village and rest in the vehicle.' },
-        { time: '05:30 AM', text: 'Wake up, freshen up and have a hot local breakfast.' },
-        { time: '07:00 AM', text: 'Start the trek towards Kalu Waterfall, the highest waterfall of Malshej.' },
-        { time: '10:30 AM', text: 'Reach the waterfall valley, enjoy the views and take photos.' },
-        { time: '11:30 AM', text: 'Begin the return trek to the base village.' },
-        { time: '02:30 PM', text: 'Reach base village and have a warm local lunch.' },
-        { time: '04:00 PM', text: 'Depart for Mumbai.' },
-        { time: '10:00 PM', text: 'Arrive back in Mumbai.' }
+        { time: '12:10 AM', text: 'Kalyan Khadakpada Circle (https://goo.gl/maps/dV5mqoibsB1ihdUo8)' },
+        { time: '03:00 AM', text: 'Reach Base village and rest in the bus' },
+        { time: '04:30 AM', text: 'Wake-up call. Get freshen up' },
+        { time: '05:00 AM', text: 'Have Breakfast and start the bus journey towards the start point of the trek.' },
+        { time: '07:00 AM', text: 'Reach the start point' },
+        { time: '07:30 AM', text: 'Start trail towards Kalu waterfall. 2 stream crossings on the way. Gods valley trek to the bottom involves walking 6kms from Waghachiwadi base village.' },
+        { time: '10:30 AM', text: 'Visit Kalu waterfall. Explore waterfall, click pictures' },
+        { time: '11:30 AM', text: 'Start trekking toward the base village. While returning, will take natural jacuzzi.' },
+        { time: '02:00 PM', text: 'Reach Base Village, Get freshen up' },
+        { time: '02:30 PM', text: 'Have Lunch' },
+        { time: '04:00 PM', text: 'Start return journey to Mumbai.' },
+        { time: '10:00 PM', text: 'Reach Mumbai. (Arrival time is subjective to the traffic and weather conditions)' }
       ]
     }
   ],
@@ -101,26 +121,35 @@ const TRIP_ITINERARIES: Record<
   w4: [
     {
       day: 1,
-      title: 'Late Night Departure from Mumbai',
-      activities: ['Pickups in Mumbai', 'Overnight journey'],
+      title: 'Departure from Mumbai',
+      activities: ['Pickups in Mumbai', 'Travel Games', 'Overnight journey'],
       slots: [
-        { time: '10:00 PM', text: 'Board the private vehicle from Borivali. Pickup points along Andheri, Sion, and Thane.' },
-        { time: '11:00 PM', text: 'Head towards the Tamhini Ghat region.' }
+        { time: '10:00 PM', text: 'Borivali National Park' },
+        { time: '10:15 PM', text: 'Malad, Sufi Irani Cafe' },
+        { time: '10:20 PM', text: 'Goregaon, Opp Hub Mall' },
+        { time: '10:30 PM', text: 'Andheri Hanuman Road' },
+        { time: '10:40 PM', text: 'Teachers colony, Khar' },
+        { time: '10:50 PM', text: 'Sion Circle' },
+        { time: '11:00 PM', text: 'Chembur, Kstar Mall' },
+        { time: '11:40 PM', text: 'Vashi Plaza' },
+        { time: '11:55 PM', text: 'Nerul LP bus Stop' },
+        { time: '12:10 AM', text: 'Kharghar 3 Star hotel' },
+        { time: '12:25 AM', text: 'MCD Kalamboli' },
+        { time: 'Further', text: 'Depart to base village. Settle down in our transfer vehicle as we start with a few travel games.' }
       ]
     },
     {
       day: 2,
-      title: 'Devkund Waterfall Trek & Return',
+      title: 'Trek to Devkund Waterfall',
       activities: ['Base village arrival', 'Forest trek to Devkund', 'Waterfall pool dip', 'Return to Mumbai'],
       slots: [
-        { time: '03:30 AM', text: 'Reach the base village Bhira and rest.' },
-        { time: '05:30 AM', text: 'Wake up, freshen up and have a warm breakfast.' },
-        { time: '07:00 AM', text: 'Start the forest hike towards the secret Devkund Waterfall.' },
-        { time: '10:30 AM', text: 'Reach Devkund pool. Enjoy the crystal clear turquoise water pool.' },
-        { time: '11:30 AM', text: 'Start the return trek to the base village.' },
-        { time: '02:30 PM', text: 'Reach the base village and have local lunch.' },
-        { time: '04:00 PM', text: 'Depart back to Mumbai.' },
-        { time: '10:00 PM', text: 'Reach back to Mumbai.' }
+        { time: '05:00 AM', text: 'Reach the base village, freshen up and fill in your tummies with some morning breakfast & tea.' },
+        { time: '06:30 AM', text: 'With a short introduction and briefing round we start our trek.' },
+        { time: '09:00 AM', text: 'As we reach the waterfall, explore the place, take a dip in the water and click pictures to take back home.' },
+        { time: '10:30 AM', text: 'After a group picture we start our descend to the base village.' },
+        { time: '01:30 PM', text: 'Freshen up on reaching the base village and settle down for some local Maharashtrian lunch.' },
+        { time: '03:00 PM', text: 'Settle in our transfer vehicle to start our return journey.' },
+        { time: '09:00 PM', text: 'Adios! Back to the mundane city life. Until next time, SEEKERS! (Arrival time is subjective to the Group Speed Traffic and weather conditions)' }
       ]
     }
   ],
@@ -257,16 +286,27 @@ const TRIP_ITINERARIES: Record<
     {
       day: 1,
       title: 'Visapur Fort Sunday Special Day Trek',
-      activities: ['Morning departure', 'Waterfall staircase trail', 'Fort ruins exploration', 'Return to Mumbai'],
+      activities: ['Waterfall staircase trail', 'Lonavala trek', 'Historic fort ruins', 'Mumbai to Mumbai'],
       slots: [
-        { time: '05:00 AM', text: 'Board the private bus from Borivali. Pickups along Andheri, Sion, and Thane.' },
-        { time: '08:30 AM', text: 'Reach base village Bhaje near Lonavala and enjoy a warm breakfast.' },
-        { time: '09:30 AM', text: 'Start the trek up Visapur Fort through the waterfall staircase trail.' },
-        { time: '12:30 PM', text: 'Reach the summit of Visapur Fort. Explore massive historic walls and water cisterns.' },
-        { time: '01:30 PM', text: 'Take group photos and begin descending.' },
-        { time: '03:30 PM', text: 'Reach the base village and have a delicious local lunch.' },
-        { time: '04:30 PM', text: 'Depart back to Mumbai.' },
-        { time: '09:00 PM', text: 'Arrive back in Mumbai.' }
+        { time: '05:00 AM', text: 'Report to The Trek Leader at Borivali National park (https://goo.gl/maps/qvxmxjK8Tmn5JgScA)' },
+        { time: '05:05 AM', text: 'Samta nagar police station, Kandivali (https://goo.gl/maps/kRgGJ9XvYK3d8FWAA)' },
+        { time: '05:15 AM', text: 'Sufi Irani Cafe, Goregaon (https://goo.gl/maps/4ZTNqab65pKPDoNC9)' },
+        { time: '05:30 AM', text: 'Hanuman Road Bus Stop Andheri (https://goo.gl/maps/SWKWuGMXSWgajCsSA)' },
+        { time: '05:45 AM', text: 'Kalanagar Bust Stop, Bandra (https://goo.gl/maps/jGkGpBZrRto5gRTJ9)' },
+        { time: '06:00 AM', text: 'Neeta Volvo, Sion (https://goo.gl/maps/iidWMx1DKGybV9jC9)' },
+        { time: '06:10 AM', text: 'Ghatkopar Mankhurd Link Road (https://goo.gl/maps/m6TtFVkCkHd6MdKr7)' },
+        { time: '06:30 AM', text: 'Vashi (under the bridge) (https://goo.gl/maps/3dpGHKPvf49FgJj6A)' },
+        { time: '06:45 AM', text: 'Nerul LP (https://goo.gl/maps/tpntbzeYVijHQieF7)' },
+        { time: '06:55 AM', text: 'Kharghar station (https://goo.gl/maps/y7hNW9wxMV7tByPr5)' },
+        { time: '07:15 AM', text: 'Kalamboli McD (https://goo.gl/maps/F4bqaobJhjcPQ8zK9)' },
+        { time: '09:00 AM', text: 'Participants travelling by their own vehicles gather outside the base village (our trek leader would be waiting for you all).' },
+        { time: '09:30 AM', text: 'Reach Base village and Enjoy breakfast.' },
+        { time: '10:00 AM', text: 'Post Introduction Start our trek.' },
+        { time: '01:00 PM', text: 'We reach the Top. You will get a beautiful view & foggy clouds to capture some pictures to store it as a memory.' },
+        { time: '02:00 PM', text: 'We start our descent. Finally, you get a view of the surroundings you climbed through in the morning.' },
+        { time: '04:00 PM', text: 'Reach the Base Village and enjoy Local Maharashtrian Lunch.' },
+        { time: '05:30 PM', text: 'Leave for Mumbai.' },
+        { time: '10:00 PM', text: 'Adios! Back to the mundane city life. (Arrival time is subjective to traffic and weather conditions)' }
       ]
     }
   ],
@@ -321,6 +361,28 @@ const TRIP_ITINERARIES: Record<
     { day: 5, title: 'Neil Island to Port Blair', description: 'Cruise back to Port Blair, visit Ross Island (Netaji Subhash Chandra Bose Island).', activities: ['Port Blair cruise return', 'Ross Island history tour', 'Local shopping'] },
     { day: 6, title: 'Port Blair Departure', description: 'Depart from Port Blair airport.', activities: ['Airport drop'] }
   ]
+};
+
+const renderTextWithLinks = (text: string) => {
+  const urlRegex = /(https?:\/\/[^\s)]+)/g;
+  const parts = text.split(urlRegex);
+  return parts.map((part, i) => {
+    if (part.match(urlRegex)) {
+      const label = part.includes('maps') ? 'Google Maps' : 'Link';
+      return (
+        <a
+          key={i}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline font-bold inline-flex items-center"
+        >
+          {label}
+        </a>
+      );
+    }
+    return part;
+  });
 };
 
 export default function TripDetailPage() {
@@ -574,7 +636,7 @@ export default function TripDetailPage() {
                                   </span>
                                 )}
                                 <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                                  {slot.text}
+                                  {renderTextWithLinks(slot.text)}
                                 </p>
                               </div>
                             </div>
@@ -614,22 +676,33 @@ export default function TripDetailPage() {
                     What&apos;s Included
                   </h3>
                   <ul className="space-y-3">
-                    <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
-                      <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
-                      <span>Comfortable standard accommodations (double/triple sharing)</span>
-                    </li>
-                    <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
-                      <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
-                      <span>Buffet meals (Healthy local breakfast & dinner daily)</span>
-                    </li>
-                    <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
-                      <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
-                      <span>Certified expert guides, coordinators, and local support</span>
-                    </li>
-                    <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
-                      <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
-                      <span>Sightseeing entry permits, adventure gear, and activities fees</span>
-                    </li>
+                    {trip.inclusions && trip.inclusions.length > 0 ? (
+                      trip.inclusions.map((inc, index) => (
+                        <li key={index} className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
+                          <span>{inc}</span>
+                        </li>
+                      ))
+                    ) : (
+                      <>
+                        <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
+                          <span>Comfortable standard accommodations (double/triple sharing)</span>
+                        </li>
+                        <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
+                          <span>Buffet meals (Healthy local breakfast & dinner daily)</span>
+                        </li>
+                        <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
+                          <span>Certified expert guides, coordinators, and local support</span>
+                        </li>
+                        <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <Check size={16} className="text-secondary mt-1 flex-shrink-0" />
+                          <span>Sightseeing entry permits, adventure gear, and activities fees</span>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </div>
 
@@ -640,22 +713,33 @@ export default function TripDetailPage() {
                     What&apos;s Excluded
                   </h3>
                   <ul className="space-y-3">
-                    <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
-                      <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
-                      <span>Personal travel expenses, shopping, laundry, and tips</span>
-                    </li>
-                    <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
-                      <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
-                      <span>Flights or transport to the starting base city</span>
-                    </li>
-                    <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
-                      <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
-                      <span>Travel medical insurance or emergency evacuation costs</span>
-                    </li>
-                    <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
-                      <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
-                      <span>Any meal or activity not mentioned explicitly in inclusions</span>
-                    </li>
+                    {trip.exclusions && trip.exclusions.length > 0 ? (
+                      trip.exclusions.map((exc, index) => (
+                        <li key={index} className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
+                          <span>{exc}</span>
+                        </li>
+                      ))
+                    ) : (
+                      <>
+                        <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
+                          <span>Personal travel expenses, shopping, laundry, and tips</span>
+                        </li>
+                        <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
+                          <span>Flights or transport to the starting base city</span>
+                        </li>
+                        <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
+                          <span>Travel medical insurance or emergency evacuation costs</span>
+                        </li>
+                        <li className="flex gap-2.5 text-sm sm:text-base text-muted-foreground">
+                          <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
+                          <span>Any meal or activity not mentioned explicitly in inclusions</span>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </div>
               </div>

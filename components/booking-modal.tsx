@@ -4,7 +4,7 @@ import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { motion } from 'framer-motion'
 import { X, Check, Calendar, Users, Mail, Phone, MessageSquare } from 'lucide-react'
-import type { Trip } from './trip-cards'
+import type { Trip } from '@/lib/trips'
 
 interface BookingModalProps {
   trip: Trip | null
@@ -328,7 +328,7 @@ export function BookingModal({ trip, isOpen, onClose, initialDate, availableDate
                             className="w-full pl-3.5 pr-10 py-2.5 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent appearance-none cursor-pointer"
                           >
                             <option value="" disabled>Choose a batch</option>
-                            {(availableDates || trip.availableDates || []).map((date) => (
+                            {(availableDates || trip?.availableDates || []).map((date: string) => (
                               <option key={date} value={date}>
                                 {date}
                               </option>

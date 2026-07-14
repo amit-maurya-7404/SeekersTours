@@ -38,7 +38,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: 4,
     title: 'Konkan Kada Sunset',
     location: 'Harishchandragad fort, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=1000&h=800&fit=crop',
+    image: '/ST-Harishchandragad.jpeg',
     category: 'Trekking'
   },
   {

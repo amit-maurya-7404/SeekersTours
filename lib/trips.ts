@@ -16,6 +16,8 @@ export interface Trip {
   type: 'weekend' | 'domestic'
   availableDates: string[]
   departureRule?: 'Fri-Sat' | 'Sun'
+  inclusions?: string[]
+  exclusions?: string[]
 }
 
 export const SAMPLE_TRIPS: Trip[] = [
@@ -24,7 +26,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     id: 'w1',
     title: 'Aadrai Jungle Trek',
     destination: 'Malshej Ghat, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop',
+    image: '/ST-Aadrai.jpeg',
     rating: 4.8,
     reviews: 142,
     duration: 1,
@@ -43,7 +45,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     id: 'w2',
     title: 'Kalu Waterfall Trek',
     destination: 'Malshej Ghat, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?w=800&auto=format&fit=crop',
+    image: '/ST-Kalu.jpeg',
     rating: 4.9,
     reviews: 205,
     duration: 1,
@@ -56,13 +58,27 @@ export const SAMPLE_TRIPS: Trip[] = [
     highlights: ['Highest waterfall of Malshej', 'Panoramic view of Kalu river valley', 'Riverside trail walk', 'Authentic local breakfast & lunch'],
     type: 'weekend',
     availableDates: [],
-    departureRule: 'Fri-Sat'
+    departureRule: 'Fri-Sat',
+    inclusions: [
+      'Travel from Mumbai to Mumbai by Ac Bus',
+      'Breakfast & Tea',
+      'Lunch (Veg Thali)',
+      'Guide Charges',
+      'Entry Charges',
+      'Expertise Charges',
+      'First Aid'
+    ],
+    exclusions: [
+      'Personal travel expenses, shopping, laundry, and tips',
+      'Travel medical insurance or emergency evacuation costs',
+      'Any meal or activity not mentioned explicitly in inclusions'
+    ]
   },
   {
     id: 'w3',
     title: 'Naneghat Trek',
     destination: 'Junnar, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop',
+    image: '/ST-Naneghat.jpeg',
     rating: 4.7,
     reviews: 110,
     duration: 1,
@@ -81,7 +97,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     id: 'w4',
     title: 'Devkund Waterfall Trek',
     destination: 'Bhira, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1433832597046-4f10e10ac764?w=800&auto=format&fit=crop',
+    image: '/ST-Devkund.jpg',
     rating: 4.9,
     reviews: 310,
     duration: 1,
@@ -94,13 +110,26 @@ export const SAMPLE_TRIPS: Trip[] = [
     highlights: ['Trek through dense Bhira forest', 'Swim in crystal-clear Devkund pool', 'View beautiful Tamhini Ghat range', 'Delicious home-cooked local meals'],
     type: 'weekend',
     availableDates: [],
-    departureRule: 'Fri-Sat'
+    departureRule: 'Fri-Sat',
+    inclusions: [
+      'Transportation from Mumbai to Mumbai by AC bus',
+      'Unlimited Breakfast & Lunch (veg / Non-veg / Jain)',
+      'Devkund Forest Entry Charges',
+      'Representatives',
+      'First-aid assistance',
+      'New Friends made, new Bonds attached'
+    ],
+    exclusions: [
+      'Personal travel expenses, shopping, laundry, and tips',
+      'Travel medical insurance or emergency evacuation costs',
+      'Any meal or activity not mentioned explicitly in inclusions'
+    ]
   },
   {
     id: 'w5',
     title: 'Kalsubai Monsoon Trek',
     destination: 'Igatpuri, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop',
+    image: '/ST-kalsubai.jpeg',
     rating: 4.9,
     reviews: 380,
     duration: 1,
@@ -119,7 +148,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     id: 'w6',
     title: 'Nanemachi Waterfall Trek',
     destination: 'Mahad, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&auto=format&fit=crop',
+    image: '/ST-Nanemachi.jpg',
     rating: 4.6,
     reviews: 85,
     duration: 1,
@@ -138,7 +167,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     id: 'w7',
     title: 'Andharban The Dark Forest Trek',
     destination: 'Tamhini Ghat, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1511497584788-876760111969?w=800&auto=format&fit=crop',
+    image: '/ST-Andharban.jpg',
     rating: 4.9,
     reviews: 275,
     duration: 1,
@@ -157,7 +186,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     id: 'w8',
     title: 'Harishchandragad Fort Monsoon Trek',
     destination: 'Ahmednagar, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1486873249359-2731bd6da57b?w=800&auto=format&fit=crop',
+    image: '/ST-Harishchandragad.jpeg',
     rating: 4.8,
     reviews: 198,
     duration: 1,
@@ -176,7 +205,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     id: 'w9',
     title: 'Sondai Fort Trek',
     destination: 'Karjat, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&auto=format&fit=crop',
+    image: '/ST-sondai.jpeg',
     rating: 4.7,
     reviews: 112,
     duration: 1,
@@ -195,7 +224,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     id: 'w10',
     title: 'One Day special Visapur Fort Trek',
     destination: 'Lonavala, Maharashtra',
-    image: 'https://images.unsplash.com/photo-1533588970094-1a9c4028017f?w=800&auto=format&fit=crop',
+    image: '/ST-Visapur.jpeg',
     rating: 4.8,
     reviews: 164,
     duration: 1,
@@ -208,7 +237,20 @@ export const SAMPLE_TRIPS: Trip[] = [
     highlights: ['Climb through waterfall staircase', 'Explore massive historic fort walls', 'Beautiful view of Lohagad Fort', 'Delicious local breakfast & lunch'],
     type: 'weekend',
     availableDates: [],
-    departureRule: 'Sun'
+    departureRule: 'Sun',
+    inclusions: [
+      '1 Veg / nonveg / jain lunch',
+      '1 Veg breakfast',
+      'Transportation from Mumbai to Mumbai by AC bus',
+      'Safety & first aid',
+      'Fort entry fees',
+      'Experienced bhatakna representatives'
+    ],
+    exclusions: [
+      'Personal travel expenses, shopping, laundry, and tips',
+      'Travel medical insurance or emergency evacuation costs',
+      'Any meal or activity not mentioned explicitly in inclusions'
+    ]
   },
 
   // Domestic Trips (type: 'domestic')

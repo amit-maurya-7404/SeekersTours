@@ -4,7 +4,7 @@ import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { motion } from 'framer-motion'
 import { X, Check, Clock, MapPin } from 'lucide-react'
-import type { Trip } from './trip-cards'
+import type { Trip } from '@/lib/trips'
 
 interface ItineraryModalProps {
   trip: Trip | null
@@ -121,7 +121,7 @@ export function ItineraryModal({ trip, isOpen, onClose, onBook }: ItineraryModal
                   <div className="mb-8">
                     <h3 className="text-lg font-bold text-card-foreground mb-4">Highlights</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {trip.highlights.map((highlight, idx) => (
+                      {(trip?.highlights || []).map((highlight: string, idx: number) => (
                         <motion.div
                           key={idx}
                           initial={{ opacity: 0, x: -10 }}
