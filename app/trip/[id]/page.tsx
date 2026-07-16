@@ -20,7 +20,7 @@ const TRIP_ITINERARIES: Record<
     slots?: { time?: string; text: string }[]
   }[]
 > = {
-  w1: [
+  'aadrai-jungle-trek': [
     {
       day: 1,
       title: 'Departure from Mumbai',
@@ -56,7 +56,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w2: [
+  'kalu-waterfall-trek': [
     {
       day: 1,
       title: 'Departure from Mumbai',
@@ -92,7 +92,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w3: [
+  'naneghat-trek': [
     {
       day: 1,
       title: 'Late Night Departure from Mumbai',
@@ -118,7 +118,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w4: [
+  'devkund-waterfall-trek': [
     {
       day: 1,
       title: 'Departure from Mumbai',
@@ -153,7 +153,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w5: [
+  'kalsubai-monsoon-trek': [
     {
       day: 1,
       title: 'Late Night Departure from Mumbai',
@@ -179,7 +179,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w6: [
+  'nanemachi-waterfall-trek': [
     {
       day: 1,
       title: 'Late Night Departure from Mumbai',
@@ -205,7 +205,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w7: [
+  'andharban-dark-forest-trek': [
     {
       day: 1,
       title: 'Late Night Departure from Mumbai',
@@ -230,7 +230,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w8: [
+  'harishchandragad-fort-monsoon-trek': [
     {
       day: 1,
       title: 'Late Night Departure from Mumbai',
@@ -256,7 +256,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w9: [
+  'sondai-fort-trek': [
     {
       day: 1,
       title: 'Late Night Departure from Mumbai',
@@ -282,7 +282,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  w10: [
+  'one-day-special-visapur-fort-trek': [
     {
       day: 1,
       title: 'Visapur Fort Sunday Special Day Trek',
@@ -310,7 +310,7 @@ const TRIP_ITINERARIES: Record<
       ]
     }
   ],
-  d1: [
+  'ladakh-highway-road-trip': [
     { day: 1, title: 'Leh Arrival & Acclimatization', description: 'Arrive at Leh Airport, check-in to your hotel, and spend the day resting to acclimatize to high altitude.', activities: ['Leh airport pick-up', 'Hotel check-in', 'Rest & Acclimatization', 'Light evening walk'] },
     { day: 2, title: 'Leh Local Sightseeing', description: 'Explore Leh local attractions including Hall of Fame, Magnetic Hill, and Sangam (confluence of Indus & Zanskar rivers).', activities: ['Sangam river view', 'Magnetic Hill ride', 'Hall of Fame visit', 'Shanti Stupa sunset'] },
     { day: 3, title: 'Leh to Nubra Valley via Khardung La', description: 'Drive over Khardung La (one of the highest motorable passes). Reach Nubra Valley and check-in to camps.', activities: ['Khardung La pass stop', 'Nubra valley drive', 'Hunder sand dunes', 'Camel ride'] },
@@ -319,7 +319,7 @@ const TRIP_ITINERARIES: Record<
     { day: 6, title: 'Pangong Lake to Leh', description: 'Witness the sunrise over Pangong Lake. Drive back to Leh crossing Chang La pass.', activities: ['Pangong sunrise', 'Chang La pass crossing', 'Leh return', 'Shopping time'] },
     { day: 7, title: 'Leh Departure', description: 'Transfer to Leh airport for your flight back home.', activities: ['Airport drop'] }
   ],
-  d2: [
+  'spiti-valley-explorer': [
     { day: 1, title: 'Shimla to Kalpa Drive', description: 'Depart from Shimla, drive along the Sutlej river, and reach Kalpa, a beautiful village overlooking Kinner Kailash.', activities: ['Sutlej river valley', 'Kalpa check-in', 'Kinner Kailash view'] },
     { day: 2, title: 'Kalpa to Kaza (Spiti Entry)', description: 'Enter Spiti valley. Cross Nako village and Tabo Monastery to reach Kaza, the sub-divisional headquarters.', activities: ['Nako Lake stop', 'Tabo Monastery tour', 'Kaza hotel check-in'] },
     { day: 3, title: 'Key Monastery & Kibber Village', description: 'Visit the stunning Key Monastery, perched on a hilltop, and explore Kibber, one of the highest villages.', activities: ['Key Monastery visit', 'Kibber village walk', 'Chicham Bridge (highest)'] },
@@ -328,7 +328,7 @@ const TRIP_ITINERARIES: Record<
     { day: 6, title: 'Chandratal to Manali Drive', description: 'Drive back to Manali crossing Rohtang Pass / Atal Tunnel. Check-in to hotel.', activities: ['Rohtang pass views', 'Atal Tunnel drive', 'Manali check-in'] },
     { day: 7, title: 'Manali Departure', description: 'Say goodbye to Spiti & return home.', activities: ['Departure'] }
   ],
-  d3: [
+  'kashmir-paradise-tour': [
     { day: 1, title: 'Srinagar Houseboat Check-in', description: 'Arrive in Srinagar. Check-in to a luxury wooden houseboat on Dal Lake and enjoy a Shikara ride at sunset.', activities: ['Srinagar airport pick-up', 'Houseboat check-in', 'Shikara ride on Dal Lake', 'Sunset views'] },
     { day: 2, title: 'Srinagar to Gulmarg Day Trip', description: 'Drive to Gulmarg, ride the famous Gondola cable car to Phase 1 & 2 for snow adventure.', activities: ['Gulmarg mountain drive', 'Gondola ride', 'Snow skiing', 'Return to Srinagar'] },
     { day: 3, title: 'Srinagar to Pahalgam', description: 'Drive to Pahalgam (Valley of Shepherds). Enroute visit saffron fields and Avantipura ruins. Check-in to hotel.', activities: ['Saffron fields stop', 'Lidder river walk', 'Pahalgam check-in'] },
@@ -336,7 +336,7 @@ const TRIP_ITINERARIES: Record<
     { day: 5, title: 'Pahalgam to Srinagar (Mughal Gardens)', description: 'Drive back to Srinagar, explore the beautiful Shalimar and Nishat Mughal Gardens.', activities: ['Mughal gardens tour', 'Local market shopping', 'Srinagar hotel check-in'] },
     { day: 6, title: 'Srinagar Departure', description: 'Transfer to Srinagar airport for departure.', activities: ['Airport drop'] }
   ],
-  d4: [
+  'meghalaya-backpacking-tour': [
     { day: 1, title: 'Guwahati to Shillong', description: 'Pick up from Guwahati, drive to Shillong, stopping by the vast Umiam Lake.', activities: ['Guwahati pick-up', 'Umiam Lake view', 'Shillong hotel check-in'] },
     { day: 2, title: 'Cherrapunji drive', description: 'Drive to Cherrapunji, visiting Elephant Falls and Mawkdok Dympep Valley bridge.', activities: ['Elephant falls', 'Mawkdok valley viewpoint', 'Cherrapunji check-in'] },
     { day: 3, title: 'Double Decker Living Root Bridge Trek', description: 'Trek down 3,000 steps to reach the legendary Double Decker Living Root Bridge at Nongriat.', activities: ['Nongriat valley trek', 'Double Decker Bridge walk', 'Rainbow falls hike'] },
@@ -345,7 +345,7 @@ const TRIP_ITINERARIES: Record<
     { day: 6, title: 'Shillong to Laitlum Canyons & Guwahati', description: 'Visit the jaw-dropping Laitlum Canyons, then drive back to Guwahati.', activities: ['Laitlum canyon view', 'Guwahati return', 'Guwahati check-in'] },
     { day: 7, title: 'Guwahati Departure', description: 'Depart from Guwahati airport.', activities: ['Airport transfer'] }
   ],
-  d5: [
+  'kerala-backwaters-and-hills': [
     { day: 1, title: 'Kochi Arrival & Munnar Drive', description: 'Arrive in Kochi, drive through scenic Cheeyappara and Valara waterfalls to Munnar.', activities: ['Kochi pick-up', 'Waterfall stops', 'Munnar resort check-in'] },
     { day: 2, title: 'Munnar Tea Fields Exploration', description: 'Explore Munnar tea estates, Eravikulam National Park (Nilgiri Tahr), and Mattupetty Dam.', activities: ['Tea estate walk', 'National park safari', 'Mattupetty dam boating'] },
     { day: 3, title: 'Munnar to Thekkady Wilds', description: 'Drive to Thekkady, visit spice plantations and take a boat safari on Periyar Lake.', activities: ['Thekkady drive', 'Spice garden tour', 'Periyar lake boat safari'] },
@@ -353,7 +353,7 @@ const TRIP_ITINERARIES: Record<
     { day: 5, title: 'Alleppey to Fort Kochi Heritage', description: 'Drive to Kochi, see Chinese fishing nets, St. Francis Church, and Jew Town.', activities: ['Chinese fishing nets', 'Jew town shopping', 'Fort Kochi heritage walk'] },
     { day: 6, title: 'Kochi Departure', description: 'Airport drop for departure.', activities: ['Airport drop'] }
   ],
-  d6: [
+  'andaman-islands-beach-escape': [
     { day: 1, title: 'Port Blair Arrival', description: 'Arrive at Port Blair, visit Cellular Jail and watch the evening Light & Sound show.', activities: ['Port Blair pick-up', 'Cellular jail tour', 'Light & Sound show'] },
     { day: 2, title: 'Port Blair to Havelock Island', description: 'Take a cruise ship to Havelock Island, spend the evening at the famous Radhanagar Beach.', activities: ['Havelock cruise ride', 'Radhanagar beach sunset', 'Resort check-in'] },
     { day: 3, title: 'Scuba Diving & Elephant Beach', description: 'Embark on a scuba diving session and visit Elephant Beach for water sports like snorkeling.', activities: ['Scuba diving', 'Elephant beach boat', 'Snorkeling & jet ski'] },

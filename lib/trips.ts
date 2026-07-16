@@ -23,7 +23,7 @@ export interface Trip {
 export const SAMPLE_TRIPS: Trip[] = [
   // Weekend Getaways (type: 'weekend') - Maharashtra Treks, Camping, Midnight Cycling
   {
-    id: 'w1',
+    id: 'aadrai-jungle-trek',
     title: 'Aadrai Jungle Trek',
     destination: 'Malshej Ghat, Maharashtra',
     image: '/ST-Aadrai.jpeg',
@@ -42,7 +42,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     departureRule: 'Fri-Sat'
   },
   {
-    id: 'w2',
+    id: 'kalu-waterfall-trek',
     title: 'Kalu Waterfall Trek',
     destination: 'Malshej Ghat, Maharashtra',
     image: '/ST-Kalu.jpeg',
@@ -75,7 +75,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     ]
   },
   {
-    id: 'w3',
+    id: 'naneghat-trek',
     title: 'Naneghat Trek',
     destination: 'Junnar, Maharashtra',
     image: '/ST-Naneghat.jpeg',
@@ -94,7 +94,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     departureRule: 'Fri-Sat'
   },
   {
-    id: 'w4',
+    id: 'devkund-waterfall-trek',
     title: 'Devkund Waterfall Trek',
     destination: 'Bhira, Maharashtra',
     image: '/ST-Devkund.jpg',
@@ -126,7 +126,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     ]
   },
   {
-    id: 'w5',
+    id: 'kalsubai-monsoon-trek',
     title: 'Kalsubai Monsoon Trek',
     destination: 'Igatpuri, Maharashtra',
     image: '/ST-kalsubai.jpeg',
@@ -145,7 +145,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     departureRule: 'Fri-Sat'
   },
   {
-    id: 'w6',
+    id: 'nanemachi-waterfall-trek',
     title: 'Nanemachi Waterfall Trek',
     destination: 'Mahad, Maharashtra',
     image: '/ST-Nanemachi.jpg',
@@ -164,7 +164,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     departureRule: 'Fri-Sat'
   },
   {
-    id: 'w7',
+    id: 'andharban-dark-forest-trek',
     title: 'Andharban The Dark Forest Trek',
     destination: 'Tamhini Ghat, Maharashtra',
     image: '/ST-Andharban.jpg',
@@ -183,7 +183,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     departureRule: 'Fri-Sat'
   },
   {
-    id: 'w8',
+    id: 'harishchandragad-fort-monsoon-trek',
     title: 'Harishchandragad Fort Monsoon Trek',
     destination: 'Ahmednagar, Maharashtra',
     image: '/ST-Harishchandragad.jpeg',
@@ -202,7 +202,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     departureRule: 'Fri-Sat'
   },
   {
-    id: 'w9',
+    id: 'sondai-fort-trek',
     title: 'Sondai Fort Trek',
     destination: 'Karjat, Maharashtra',
     image: '/ST-sondai.jpeg',
@@ -221,7 +221,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     departureRule: 'Fri-Sat'
   },
   {
-    id: 'w10',
+    id: 'one-day-special-visapur-fort-trek',
     title: 'One Day special Visapur Fort Trek',
     destination: 'Lonavala, Maharashtra',
     image: '/ST-Visapur.jpeg',
@@ -255,7 +255,7 @@ export const SAMPLE_TRIPS: Trip[] = [
 
   // Domestic Trips (type: 'domestic')
   {
-    id: 'd1',
+    id: 'ladakh-highway-road-trip',
     title: 'Ladakh Highway Road Trip',
     destination: 'Leh-Ladakh',
     image: 'https://images.unsplash.com/photo-1581793745862-99f579662e7b?w=600&h=400&fit=crop',
@@ -271,7 +271,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     availableDates: ['20 Jun - 27 Jun 2026', '11 Jul - 18 Jul 2026', '08 Aug - 15 Aug 2026']
   },
   {
-    id: 'd2',
+    id: 'spiti-valley-explorer',
     title: 'Spiti Valley Explorer',
     destination: 'Himachal Pradesh',
     image: 'https://images.unsplash.com/photo-1611001716885-b3402558a62b?w=600&h=400&fit=crop',
@@ -287,7 +287,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     availableDates: ['21 Jun - 27 Jun 2026', '12 Jul - 18 Jul 2026', '09 Aug - 15 Aug 2026']
   },
   {
-    id: 'd3',
+    id: 'kashmir-paradise-tour',
     title: 'Kashmir Paradise Tour',
     destination: 'Jammu & Kashmir',
     image: 'https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?w=600&h=400&fit=crop',
@@ -303,7 +303,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     availableDates: ['20 Jun - 25 Jun 2026', '11 Jul - 16 Jul 2026', '08 Aug - 13 Aug 2026']
   },
   {
-    id: 'd4',
+    id: 'meghalaya-backpacking-tour',
     title: 'Meghalaya Backpacking Tour',
     destination: 'Northeast India',
     image: 'https://images.unsplash.com/photo-1625123627242-97ef1000c6d1?w=600&h=400&fit=crop',
@@ -319,7 +319,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     availableDates: ['20 Jun - 26 Jun 2026', '11 Jul - 17 Jul 2026', '08 Aug - 14 Aug 2026']
   },
   {
-    id: 'd5',
+    id: 'kerala-backwaters-and-hills',
     title: 'Kerala Backwaters & Hills',
     destination: 'Kerala',
     image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=600&h=400&fit=crop',
@@ -335,7 +335,7 @@ export const SAMPLE_TRIPS: Trip[] = [
     availableDates: ['20 Jun - 25 Jun 2026', '11 Jul - 16 Jul 2026', '08 Aug - 13 Aug 2026']
   },
   {
-    id: 'd6',
+    id: 'andaman-islands-beach-escape',
     title: 'Andaman Islands Beach Escape',
     destination: 'Andaman Islands',
     image: 'https://images.unsplash.com/photo-1540206395-68808572332f?w=600&h=400&fit=crop',

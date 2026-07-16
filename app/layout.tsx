@@ -61,6 +61,7 @@ const delaGothicOne = Dela_Gothic_One({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.seekerstours.in'),
   title: 'Seekers Tours - Premium Adventure Travel',
   description: 'Discover unforgettable journeys with Seekers Tours. Expert-guided adventure travel experiences to exotic destinations.',
   robots: {
@@ -86,6 +87,28 @@ export const metadata: Metadata = {
       },
     ],
     apple: '/apple-icon.png',
+  },
+  openGraph: {
+    title: 'Seekers Tours - Premium Adventure Travel',
+    description: 'Discover unforgettable journeys with Seekers Tours. Expert-guided adventure travel experiences to exotic destinations.',
+    url: 'https://www.seekerstours.in',
+    siteName: 'Seekers Tours',
+    images: [
+      {
+        url: '/images/LOGO.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Seekers Tours Logo',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Seekers Tours - Premium Adventure Travel',
+    description: 'Discover unforgettable journeys with Seekers Tours. Expert-guided adventure travel experiences to exotic destinations.',
+    images: ['/images/LOGO.jpeg'],
   },
 }
 
