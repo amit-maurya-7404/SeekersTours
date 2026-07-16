@@ -72,21 +72,9 @@ export const metadata: Metadata = {
     google: '4cY5tsr4YyZpMkzBMj8UL5eydKy5lgpyoZygz5v3X-w',
   },
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/LOGO.jpeg',
+    shortcut: '/favicon.ico',
+    apple: '/images/LOGO.jpeg',
   },
   openGraph: {
     title: 'Seekers Tours - Premium Adventure Travel',
