@@ -54,7 +54,7 @@ export function Contact() {
       <div className="absolute bottom-0 left-10 w-80 h-80 bg-secondary/5 rounded-full filter blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export function Contact() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16 items-start">
-          
+
           {/* Contact Info Panel */}
           <motion.div
             variants={containerVariants}

@@ -412,7 +412,7 @@ export default function TripDetailPage() {
   const [activeMonth, setActiveMonth] = useState('July')
   useEffect(() => {
     if (dates.length > 0) {
-      const firstAvailableMonth = ['July', 'August', 'September'].find(m => 
+      const firstAvailableMonth = ['July', 'August', 'September'].find(m =>
         dates.some(d => d.includes(m.substring(0, 3)))
       )
       if (firstAvailableMonth) {
@@ -502,10 +502,10 @@ export default function TripDetailPage() {
       {/* Main Grid Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Side: Trip Details */}
           <div className="lg:col-span-8 space-y-12">
-            
+
             {/* Overview Section */}
             <div className="bg-card rounded-xl p-6 sm:p-8 shadow-lg border border-border">
               <h2 className="text-2xl font-bold text-card-foreground mb-4">Trip Overview</h2>
@@ -548,11 +548,10 @@ export default function TripDetailPage() {
                         key={month}
                         type="button"
                         onClick={() => setActiveMonth(month)}
-                        className={`pb-3 px-4 font-bold text-sm transition-all relative whitespace-nowrap cursor-pointer ${
-                          isActive 
-                            ? 'text-accent border-b-2 border-accent' 
+                        className={`pb-3 px-4 font-bold text-sm transition-all relative whitespace-nowrap cursor-pointer ${isActive
+                            ? 'text-accent border-b-2 border-accent'
                             : 'text-muted-foreground hover:text-card-foreground'
-                        }`}
+                          }`}
                       >
                         {month}
                       </button>
@@ -570,16 +569,14 @@ export default function TripDetailPage() {
                       <div
                         key={idx}
                         onClick={() => setSelectedDate(date)}
-                        className={`p-4 rounded-xl flex items-center justify-between border transition-all duration-300 cursor-pointer ${
-                          isSelected
+                        className={`p-4 rounded-xl flex items-center justify-between border transition-all duration-300 cursor-pointer ${isSelected
                             ? 'bg-accent/15 border-accent shadow-md scale-[1.02]'
                             : 'bg-background border-border hover:border-accent/40'
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center gap-3">
-                          <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                            isSelected ? 'bg-accent text-white' : 'bg-muted text-muted-foreground'
-                          }`}>
+                          <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${isSelected ? 'bg-accent text-white' : 'bg-muted text-muted-foreground'
+                            }`}>
                             <Calendar size={18} />
                           </div>
                           <div>
@@ -587,11 +584,10 @@ export default function TripDetailPage() {
                             <p className="text-card-foreground font-bold text-sm sm:text-base">{date}</p>
                           </div>
                         </div>
-                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${
-                          isSelected
+                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${isSelected
                             ? 'border-accent bg-accent text-white scale-110'
                             : 'border-border bg-background text-transparent'
-                        }`}>
+                          }`}>
                           <Check size={12} className="stroke-[3]" />
                         </div>
                       </div>
@@ -628,7 +624,7 @@ export default function TripDetailPage() {
                             <div key={sIdx} className="relative group">
                               {/* Sub-timeline dot */}
                               <div className="absolute -left-[21px] sm:-left-[29px] top-1.5 w-3.5 h-3.5 rounded-full bg-secondary border-2 border-card shadow-sm transition-transform group-hover:scale-125 duration-200" />
-                              
+
                               <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4">
                                 {slot.time && (
                                   <span className="inline-flex items-center shrink-0 px-2.5 py-1 text-xs font-bold rounded-md bg-secondary/15 text-secondary border border-secondary/20 shadow-sm w-fit uppercase tracking-wider">
@@ -647,7 +643,7 @@ export default function TripDetailPage() {
                           {day.description}
                         </p>
                       )}
-                      
+
                       {/* Activities badges */}
                       <div className="flex flex-wrap gap-2 pt-2">
                         {day.activities.map((activity, i) => (
@@ -749,7 +745,7 @@ export default function TripDetailPage() {
 
           {/* Right Side: Sticky Booking Sidebar */}
           <div className="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
-            
+
             {/* Booking Summary Widget */}
             <div className="bg-card rounded-xl shadow-xl border border-border overflow-hidden">
               <div className="bg-gradient-to-r from-primary to-primary/80 p-6 text-primary-foreground text-center">
@@ -883,7 +879,7 @@ export default function TripDetailPage() {
         {/* Main Sticky Row */}
         <div className="flex items-center justify-between px-5 py-3.5 relative">
           {/* Toggle Button / Arrow wrapper */}
-          <div 
+          <div
             onClick={() => setShowBreakdown(!showBreakdown)}
             className="flex flex-col cursor-pointer select-none"
           >

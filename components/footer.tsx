@@ -171,7 +171,17 @@ export function Footer() {
           <div className="flex items-center gap-1.5 text-primary-foreground/60 font-medium order-3">
             <span>Made with</span>
             <Heart size={14} className="text-accent fill-accent animate-pulse" />
-            <span>by Seekers Team</span>
+            <span>
+              by{' '}
+              <a
+                href="https://wa.me/919137290903"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors underline underline-offset-2 decoration-dotted cursor-pointer"
+              >
+                Amit Maurya (+91 91372 90903)
+              </a>
+            </span>
           </div>
         </motion.div>
       </motion.div>
